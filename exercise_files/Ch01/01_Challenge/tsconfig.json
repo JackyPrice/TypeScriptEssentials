@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+//    "allowJS": true,
+//    "checkJS": true,
+    "outDir": "./out",
+    "target": "esnext"
+//    "noEmit": true
+  },
+  "include": [
+    "**.ts",
+    "../01_Solution/utils.ts"
+  ],
+  "exclude": ["./out"]
+}
