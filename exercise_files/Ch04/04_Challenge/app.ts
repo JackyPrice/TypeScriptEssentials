@@ -1,6 +1,11 @@
-function query<T>(
-    items: T[],
-    query: any // <--- replace this!
+interface Item {
+    name: string,
+    age: number
+}
+
+function query<Item>(
+    items: Item[],
+    query: { [TProp in keyof Item]?: (item: Item[TProp]) => boolean }
 ) {
     return items.filter(item => {
         // iterate through each of the item's properties
@@ -19,6 +24,7 @@ function query<T>(
         return false
     })
 }
+
 
 const matches = query(
     [
